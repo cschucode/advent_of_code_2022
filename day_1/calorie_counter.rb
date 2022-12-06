@@ -1,6 +1,6 @@
 lines = File.read("input").split("\n")
 
-def calorie_counter(lines, x)
+def calorie_counter(lines, one_elf)
     top_elf = 0
     second_elf = 0
     third_elf = 0
@@ -29,11 +29,11 @@ def calorie_counter(lines, x)
             running_total = 0
         end
     end
-    x == 1 ? top_elf : (top_elf + second_elf + third_elf)
+    one_elf ? top_elf : (top_elf + second_elf + third_elf)
 end
 
 # Part 1 (top elf)
-puts calorie_counter(lines, 1)
+puts calorie_counter(lines, true)
 
 # Part 2 (top 3)
-puts calorie_counter(lines, 3)
+puts calorie_counter(lines, false)
